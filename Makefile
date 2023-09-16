@@ -37,3 +37,7 @@ mysql-conf-deploy:
 	sudo cp -r etc/mysql/* /etc/mysql
 	mysqld --verbose --help > /dev/null
 	sudo systemctl restart mysql
+
+.PHONY: open-mysql
+open-mysql:
+	mysql -u isucon -n isucondition -pisucon

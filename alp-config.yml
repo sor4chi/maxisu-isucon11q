@@ -1,4 +1,10 @@
 matching_groups:
+  - /api/condition/[0-9a-z-]+
+  - /api/isu/[0-9a-z-]+
+  - /isu/[0-9a-z-]+
+  - /isu/[0-9a-z-]+/conditition
+  - /isu/[0-9a-z-]+/graph
+  - /assets/*
 sort: avg
 reverse: true
 metrics:

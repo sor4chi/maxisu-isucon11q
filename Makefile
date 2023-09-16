@@ -4,7 +4,8 @@ rotate-all: rotate-access-log rotate-slow-log
 .PHONY: rotate-access-log
 rotate-access-log:
 	echo "Rotating access log"
-	sudo mv /var/log/nginx/access.ndjson /var/log/nginx/access.ndjson.$(shell date +%Y%m%d) sudo systemctl restart nginx
+	sudo mv /var/log/nginx/access.ndjson /var/log/nginx/access.ndjson.$(shell date +%Y%m%d)
+	sudo systemctl restart nginx
 
 .PHONY: rotate-slow-log
 rotate-slow-log:

@@ -41,3 +41,9 @@ mysql-conf-deploy:
 .PHONY: open-mysql
 open-mysql:
 	mysql -u isucon -n isucondition -pisucon
+
+.PHONY: app-deploy
+app-deploy:
+	echo "app deploy"
+	cd webapp/go && make
+	sudo systemctl restart isucondition.go.service

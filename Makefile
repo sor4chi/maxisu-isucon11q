@@ -45,5 +45,5 @@ open-mysql:
 .PHONY: app-deploy
 app-deploy:
 	echo "app deploy"
-	cd webapp/go && make
+	cd go && make
 	sudo systemctl restart isucondition.go.service
